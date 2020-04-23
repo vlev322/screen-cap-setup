@@ -1,0 +1,301 @@
+@import './theme'
+
+*
+  box-sizing: border-box
+html
+  font-family: sans-serif
+
+body
+  font-size: 16px
+  color: $text-c
+  line-height: 1.5
+  background-color: #fff
+  font-family: 'Raleway'
+
+a:hover , a
+  color: inherit
+  text-decoration: inherit
+
+a, button
+  cursor: pointer
+
+button::-moz-focus-inner,
+button::active,
+input::-moz-focus-inner,
+input::active,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+  border-style: none
+  padding: 0
+  outline: none,
+  box-shadow: none
+button, input,
+input:focus, input:active
+  outline: none
+  background: #ffffff
+  border: none
+  border-radius: 3px
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+  outline: none
+
+p, body
+  padding: 0
+  margin: 0
+
+%flex-c
+  display: flex
+  align-items: center
+  justify-content: center
+%flex-sb
+  @extend %flex-c
+  justify-content: space-between
+%flex-sa
+  @extend %flex-c
+  justify-content: space-around
+
+.lines-around
+  overflow: hidden
+  text-align: center
+
+.accent-color
+  color: $accent
+
+.lines-around:before,
+.lines-around:after
+  background-color: $bdr-c
+  content: ""
+  display: inline-block
+  height: 2px
+  position: relative
+  vertical-align: middle
+  width: 50%
+
+.lines-around:before
+  right: 2em
+  margin-left: -50%
+
+.lines-around:after
+  left: 2em
+  margin-right: -50%
+
+.main-container
+  position: relative
+
+.header-wrapper
+  position: relative
+  background-color: #ffffff
+  border-bottom: 1px solid #D4D4D4
+  padding: 9px 60px 8px 14px
+#acc-settings
+  display: none
+header
+  margin: 0 auto
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-size: 14px
+  font-weight: 500
+  img
+    height: 48px
+    width: auto
+  section
+    @extend %flex-sb
+    >label
+      color: $accent
+      margin-right: 110px
+      cursor: pointer
+      font-size: 16px
+    >div
+      label
+        cursor: pointer
+      .acc-settings
+        font-size: 16px
+        font-family: Lato
+        display: none
+        position: absolute
+        border-radius: 3px
+        box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.15)
+        border: solid 1px #f9f9f9
+        background-color: #ffffff
+        right: -30px
+        top: 40px
+        p
+          white-space: nowrap
+          padding: 15px 48px 12px 17px
+
+#acc-settings:checked ~ .acc-settings
+  display: block
+
+.sub-title-lower
+  padding-bottom: 5px
+  margin-bottom: 15px
+  border-bottom: 1px solid #D4D4D4
+
+.btn-large
+  background-color: $accent
+  color: #ffffff
+  border: solid 1px $accent
+  font-size: 14px
+  width: 100%
+  height: 72px
+
+.main-layout
+  margin: 0 auto
+  position: relative
+  height: 100%
+  width: 100%
+
+// menu flow
+.flow
+  width: 277px
+  background-color: #f5f7ff
+  height: 92vh
+  font-size: 18px
+  color: $text-c
+  box-shadow: 4px 0 6px 0 rgba(0, 0, 0, 0.05)
+  &-item
+    padding: 14px 39px
+    display: flex
+    align-items: center
+    &-content
+      display: none
+    &-title
+      @extend %flex-sa
+      justify-content: flex-start
+      opacity: 0.7
+      font-weight: 500
+      .marker-active, .marker-done
+        display: none
+      span
+        margin-right: 18px
+    &-active &-title
+      color: $accent
+      font-weight: 600
+      opacity: 1
+    &-done
+      .flow-item-title
+        opacity: 1
+      .marker
+        display: none
+        &-done
+          display: block
+
+    &-active
+      background: #fff
+      border-left: 4px solid $accent
+      padding-left: 19px
+      .flow-item-content
+        display: block
+      .marker
+        display: none
+        &-active
+          display: block
+
+// flow item content
+.flow-item-content
+  position: absolute
+  left: 280px
+  top: 0
+  font-family: 'Raleway'
+  padding: 50px 67px
+  width: 80%
+  height: 85%
+  overflow: scroll
+  .content-title
+    font-size: 24px
+    font-weight: 500
+    margin: 15px 0
+    margin-top: 0
+    span
+      color: $accent
+    &-sm
+      font-weight: 500
+      font-size: 18px
+  .darken-block
+    background-color: #fafbfd
+    padding: 44px 26px
+    font-size: 14px
+    font-weight: 500
+    margin-top: 21px
+    @extend %flex-sb
+    align-items: flex-start
+    p
+      margin-bottom: 15px
+
+.confirming-panel
+  @extend %flex-c
+  position: absolute
+  justify-content: flex-end
+  bottom: 0
+  width: 100%
+  height: 110px
+  height: 105px
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2)
+  background-color: #fff
+  padding: 29px 135px
+  padding-bottom: 36px
+  button
+    padding: 12px 103px
+    background-color: $accent
+    color: #ffffff
+    border-radius: 3px
+  span
+    margin-right: 150px
+    color: $accent
+    cursor: pointer
+
+.confirming-panel, button
+  text-transform: uppercase
+  font-family: 'Lato'
+  line-height: 1.14
+  letter-spacing: 1.25px
+  font-size: 14px
+  font-weight: 300
+
+//Content for setup flow
+.dropdown-content
+  display: none
+.custom-dropdown
+  margin-top: 21px
+  border-bottom: solid 1px $bdr-c
+  span
+    color: #949494
+    font-size: 16px
+    margin-right: 10px
+    cursor: pointer
+  .darken-block
+    border-top: solid 1px $bdr-c
+    margin-top: 0
+.custom-dropdow-open
+  display: block
+.arrow
+  position: relative
+  height: 8px
+  width: 7px
+  display: inline-block
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0px
+    width: 1px
+    height: 100%
+    transition: all 0.5s
+  &::before
+    left: -1px
+    transform: rotate(-45deg)
+    background-color: #949494
+  &::after
+    left: 4px
+    transform: rotate(45deg)
+    background-color: #949494
+  .open::before &
+    left: -1px
+    transform: rotate(45deg)
+    display: none

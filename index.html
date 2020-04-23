@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screens Cam</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/Verdana/verdana.css" />
+    <link rel="stylesheet" href="./assets/fonts/Raleway/raleway.css" />
+    <link rel="stylesheet" href="./assets/fonts/Lato/lato.css" />
+    <!-- Other stylesheets -->
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Header block START-->
+      <div class="header-wrapper">
+        <header>
+          <div>
+            <a href="#"><img src="./assets/img/icons/png/logo.png" alt="home page" /></a>
+          </div>
+          <section>
+            <label for="dialog_state">Help</label>
+            <div>
+              <input type="checkbox" id="acc-settings" />
+              <label for="acc-settings">My Account</label>
+              <div class="acc-settings">
+                <p><a href="#">Settings</a></p>
+                <p><a href="#">Sign out</a></p>
+              </div>
+            </div>
+          </section>
+        </header>
+      </div>
+      <!-- Header block END-->
+
+      <div class="main-layout">
+        <!-- Panel Controls START-->
+        <div class="flow">
+          <div class="flow-item flow-item-active">
+            <div class="flow-item-title">
+              <span class="marker">1</span>
+              <span class="marker-active"><img src="./assets/img/icons/vector/arrow-right.svg" alt="" /></span>
+              <span class="marker-done"><img src="./assets/img/icons/vector/icon-done.svg" alt="" /></span>
+              <p>Set Up</p>
+            </div>
+            <div class="flow-item-content">
+              <div class="content-title">
+                <p><span>Step 1: </span>Remove the cover</p>
+              </div>
+              <p class="content-title-sm">Adjust the light source to optimize the signal</p>
+              <div class="darken-block">
+                <div class="darken-block-text">
+                  <p>1. Install safety clips</p>
+                  <p>2. Loosen captive screws</p>
+                  <p>3. Remove safety clips</p>
+                  <p>4. Slide cover off</p>
+                </div>
+                <div class="darken-block-img">
+                  <img src="./assets/img/gif/step_1.gif" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-item-title">
+              <span class="marker">2</span>
+              <span class="marker-active"><img src="./assets/img/icons/vector/arrow-right.svg" alt="" /></span>
+              <span class="marker-done"><img src="./assets/img/icons/vector/icon-done.svg" alt="" /></span>
+              <p>Align Light</p>
+            </div>
+            <div class="flow-item-content">
+              <div class="content-title">
+                <p><span>Step 2: </span>Align Light Source</p>
+              </div>
+              <p class="content-title-sm">Remove cover to focus the lens</p>
+
+              <div class="custom-dropdown">
+                <span>Instructions</span><div class="arrow"></div>
+                <div class="dropdown-content">
+                  <div class="darken-block">
+                    <div class="darken-block-text">
+                      <p>1. Install the light source</p>
+                      <p>2. Place Zone 1 of the supplied target sheet in the field of view of the camera.</p>
+                      <p>3. Loosen the clamp and adjust the position of the light source to illuminate the field of view of the MV.X</p>
+                      <p>4. Monitor the Live View below to maximize the brightness of the image</p>
+                      <p>5. Using the Live Spatial Profile Plot, adjust the illumination for the best uniformity across he plot.</p>
+                    </div>
+                    <img src="./assets/img/gif/step_2.gif" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-item-title">
+              <span class="marker">3</span>
+              <span class="marker-active"><img src="./assets/img/icons/vector/arrow-right.svg" alt="" /></span>
+              <span class="marker-done"><img src="./assets/img/icons/vector/icon-done.svg" alt="" /></span>
+              <p>Focus</p>
+            </div>
+            <div class="flow-item-content">
+              content Focus
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-item-title">
+              <span class="marker">4</span>
+              <span class="marker-active"><img src="./assets/img/icons/vector/arrow-right.svg" alt="" /></span>
+              <span class="marker-done"><img src="./assets/img/icons/vector/icon-done.svg" alt="" /></span>
+              <p>Fasten Cover</p>
+            </div>
+            <div class="flow-item-content">
+              content Fasten Cover
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-item-title">
+              <span class="marker">5</span>
+              <span class="marker-active"><img src="./assets/img/icons/vector/arrow-right.svg" alt="" /></span>
+              <span class="marker-done"><img src="./assets/img/icons/vector/icon-done.svg" alt="" /></span>
+              <p>Capture References</p>
+            </div>
+            <div class="flow-item-content">
+              content Capture References
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-item-title">
+              <span class="marker">6</span>
+              <span class="marker-active"><img src="./assets/img/icons/vector/arrow-right.svg" alt="" /></span>
+              <span class="marker-done"><img src="./assets/img/icons/vector/icon-done.svg" alt="" /></span>
+              <p>Set Up confirmation</p>
+            </div>
+            <div class="flow-item-content">
+              content Set Up confirmation
+            </div>
+          </div>
+        </div>
+        <div id="confirming-panel" class="confirming-panel">
+          <span>skip wizard</span>
+          <button id="btn-next">next</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
