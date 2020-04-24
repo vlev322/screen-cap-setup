@@ -1,12 +1,10 @@
 // Custom dropdown
-
 for (const dropdown of document.querySelectorAll(".custom-dropdown")) {
   dropdown.addEventListener("click", function () {
     this.querySelector(".dropdown-content").classList.toggle("custom-dropdow-open");
     this.querySelector(".arrow").classList.toggle("arrow-open");
   });
 }
-
 
 // Control menu flow
 function* menuItemsGenerator(items) {
@@ -22,9 +20,12 @@ const btnNext = document.getElementById("btn-next");
 
 btnNext.addEventListener("click", () => {
   const currentItem = menuItemsIterable.next().value;
-  const currentPos = menuItemsIterable.next().value;
+  const currentPos = menuItemsIterable.next();
 
-  menuItems[currentPos].classList.add("flow-item-active");
+  if (!(currentPos.value < menuItems.length)) {
+    return;
+  }
+  menuItems[currentPos.value].classList.add("flow-item-active");
   currentItem.classList.remove("flow-item-active");
   currentItem.classList.add("flow-item-done");
 });
