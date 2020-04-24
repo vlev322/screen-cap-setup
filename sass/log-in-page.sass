@@ -15,8 +15,23 @@
   section:first-child
     width: 75%
     background-image: url('../assets/img/backgrounds/bg-log_in.png')
+    background-repeat: no-repeat
+    background-size: contain
     height: 100vh
-
+    @extend %flex-c
+    flex-direction: column
+    color: #ffffff
+    font-family: Lato
+    h1
+      font-size: 34px
+      font-weight: 600
+      letter-spacing: -0.12px
+      text-align: center
+      margin: 0
+    p
+      font-size: 20px
+      letter-spacing: -0.07px
+      font-weight: 300
 .log-in-page-container
   .log-in-header
     padding-left: 98px
