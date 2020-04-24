@@ -3,16 +3,10 @@
 for (const dropdown of document.querySelectorAll(".custom-dropdown")) {
   dropdown.addEventListener("click", function () {
     this.querySelector(".dropdown-content").classList.toggle("custom-dropdow-open");
+    this.querySelector(".arrow").classList.toggle("arrow-open");
   });
 }
 
-// window.addEventListener("click", function (e) {
-//   for (const select of document.querySelectorAll(".custom-select")) {
-//     if (!select.contains(e.target)) {
-//       select.classList.remove("open");
-//     }
-//   }
-// });
 
 // Control menu flow
 function* menuItemsGenerator(items) {

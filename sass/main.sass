@@ -64,7 +64,9 @@ p, body
 
 .accent-color
   color: $accent
-
+.horizontal-offset
+  margin-top: 80px
+  margin-bottom: 20px
 .lines-around:before,
 .lines-around:after
   background-color: $bdr-c
@@ -207,6 +209,21 @@ header
   width: 80%
   height: 85%
   overflow: scroll
+  .content-text
+    font-size: 14px
+    line-height: 1.29
+    font-weight: 500
+    margin-top: 50px
+  .content-btn-collect
+    @extend %flex-c
+    padding: 50px 0
+    button
+      background-color: $accent
+      font-size: 14px
+      color: #ffffff
+      text-transform: none
+      padding: 12px 38px
+      font-weight: 400
   .content-title
     font-size: 24px
     font-weight: 500
@@ -217,6 +234,9 @@ header
     &-sm
       font-weight: 500
       font-size: 18px
+    &-xs
+      font-size: 16px
+      color: $text-c-sec
   .darken-block
     background-color: #fafbfd
     padding: 44px 26px
@@ -259,21 +279,6 @@ header
   font-weight: 300
 
 //Content for setup flow
-.dropdown-content
-  display: none
-.custom-dropdown
-  margin-top: 21px
-  border-bottom: solid 1px $bdr-c
-  span
-    color: #949494
-    font-size: 16px
-    margin-right: 10px
-    cursor: pointer
-  .darken-block
-    border-top: solid 1px $bdr-c
-    margin-top: 0
-.custom-dropdow-open
-  display: block
 .arrow
   position: relative
   height: 8px
@@ -290,12 +295,124 @@ header
   &::before
     left: -1px
     transform: rotate(-45deg)
-    background-color: #949494
+    background-color: $text-c-sec
   &::after
     left: 4px
     transform: rotate(45deg)
-    background-color: #949494
-  .open::before &
-    left: -1px
-    transform: rotate(45deg)
+    background-color: $text-c-sec
+
+.dropdown-content
+  display: none
+.custom-dropdown
+  margin-top: 21px
+  margin-bottom: 35px
+  >div
+    border-bottom: solid 1px $bdr-c
+  span
+    color: $text-c-sec
+    font-size: 16px
+    margin-right: 10px
+    cursor: pointer
+    margin-bottom: 5px
+  .darken-block
+    margin-top: 0
+
+.custom-dropdow-open
+  display: block
+
+.arrow-open
+  &::before
+    transform: rotate(-135deg)
+  &::after
+    transform: rotate(135deg)
+
+.live-preview
+  max-width: 800px
+  height: 350px
+  background-color: #d8d8d8
+  margin-top: 10px
+  &-indicate
+    background-color: $accent
+    text-transform: uppercase
+    color: #ffffff
+    width: 132px
+    padding: 3px 10px
+    @extend %flex-sb
+    div
+      height: 13px
+      width: 13px
+      background-color: $warn
+      border: 2px solid #fff
+      border-radius: 50%
+
+.flow-item-content .content-inputs
+  padding: 30px 100px
+  div:first-child
+    p
+      font-size: 18px
+      margin-bottom: 35px
+      img
+        vertical-align: super
+        cursor: pointer
+
+  section
+    >input
+      border: none
+      border-bottom: 1px solid $bdr-c
+      background: transparent
+      margin-bottom: 35px
+      font-size: 18px
+      width: 250px
+    div
+      margin-bottom: 35px
+      position: relative
+      text-align: right
+      input
+        padding: 6px 18px
+        border: 1px solid $bdr-c
+        border-radius: 3px
+        max-width: 97px
+        font-size: 14px
+      span
+        font-size: 14px
+        color: $text-c-sec
+        position: absolute
+        right: 10px
+        top: 5px
+
+.content-inputs ~ .content-text
+  margin-bottom: 80px
+
+.tip
+  position: relative
+  section
     display: none
+    background-color: $accent
+    padding: 7px 11px
+    padding-bottom: 9px
+    border-radius: 3px
+    color: #ffffff
+    font-size: 12px
+    line-height: 1
+    position: absolute
+    width: 300px
+    top: -47px
+    left: 48px
+    div.cube-wrapper
+      position: relative
+      margin: 0
+      .cube
+        margin: 0
+        position: absolute
+        height: 15px
+        width: 15px
+        background-color: $accent
+        transform: rotate(45deg)
+        bottom: -16px
+        left: 122px
+  img
+    position: absolute
+    top: 5px
+    right: 38px
+    &:hover ~ section
+      display: block
