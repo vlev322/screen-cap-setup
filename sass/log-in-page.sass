@@ -8,6 +8,12 @@
   &:-ms-input-placeholder
     @content
 
+.pointer
+  cursor: pointer
+
+.blur
+  filter: blur(6px)
+
 .log-in-page-container
   display: flex
   section
@@ -16,7 +22,7 @@
     width: 75%
     background-image: url('../assets/img/backgrounds/bg-log_in.png')
     background-repeat: no-repeat
-    background-size: contain
+    background-size: cover
     height: 100vh
     @extend %flex-c
     flex-direction: column
@@ -113,3 +119,116 @@
     line-height: 1.14
     letter-spacing: 1.25px
     margin-top: 44px
+
+// modal
+.modal-wrapper
+  position: absolute
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.4)
+  top: 0
+  display: none
+  align-items: center
+
+.modal
+  position: relative
+  padding: 50px
+  max-width: 720px
+  min-width: 520px
+  max-height: 100%
+  overflow: scroll
+  background: #ffffff
+  border-radius: 3px
+  margin: 0 auto
+  >button
+    position: absolute
+    right: 20px
+    top: 20px
+
+.large-dlg-title
+  font-size: 24px
+
+.small-dlg-title
+  font-size: 14px
+  color: #949494
+  .lines-around:before, .lines-around:after
+    width: 65px
+
+.device-info
+  display: flex
+  flex-direction: column
+  background-color: rgba(215, 225, 234, 0.3)
+  padding: 30px 0
+  margin-top: 25px
+  margin-bottom: 34px
+  >button
+    font-family: Raleway
+    padding: 7px 44px
+    border: solid 1px $accent
+    background-color: rgba(215, 225, 234, 0.8)
+    color: $text-c
+    font-size: 12px
+    margin-top: 40px
+    font-weight: 600
+    align-self: center
+    img
+      margin-right: 10px
+  section
+    display: flex
+    align-items: center
+    justify-content: space-around
+    >div
+      padding: 0 14px
+      display: flex
+      div, aside
+        display: flex
+        flex-direction: column
+        align-items: start
+        justify-content: space-between
+        font-size: 12px
+        p
+          white-space: nowrap
+          margin-top: 15px
+          margin-right: 35px
+          letter-spacing: 1.35px
+          color: #121212
+          text-transform: uppercase
+          opacity: 0.5
+          font-weight: 400
+        p:first-child
+          margin-top: 0
+      aside
+        flex-direction: start
+        span
+          white-space: nowrap
+          font-weight: 600
+      &:last-child
+        border-left: solid 1px $bdr-c
+    >div:first-child
+      padding: 0
+
+.help-modal
+  .small-dlg-title
+    margin: 25px 0
+  article p
+    font-size: 14px
+    font-weight: 600
+    margin-bottom: 10px
+
+.qr-code
+  p
+    flex-grow: 0
+    line-height: 2
+  img
+    margin-left: 70px
+    flex-grow: 1
+
+.contact-phone
+  p:last-child
+    font-size: 22px
+
+.qr-code, .contact-phone
+  @extend %flex-sb
+
+.modal-open
+  display: flex

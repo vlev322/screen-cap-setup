@@ -1,3 +1,10 @@
+.pointer {
+  cursor: pointer; }
+
+.blur {
+  -webkit-filter: blur(6px);
+          filter: blur(6px); }
+
 .log-in-page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,7 +15,7 @@
     width: 75%;
     background-image: url("../assets/img/backgrounds/bg-log_in.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -119,6 +126,145 @@
     letter-spacing: 1.25px;
     margin-top: 44px; }
 
+.modal-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.modal {
+  position: relative;
+  padding: 50px;
+  max-width: 720px;
+  min-width: 520px;
+  max-height: 100%;
+  overflow: scroll;
+  background: #ffffff;
+  border-radius: 3px;
+  margin: 0 auto; }
+  .modal > button {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+
+.large-dlg-title {
+  font-size: 24px; }
+
+.small-dlg-title {
+  font-size: 14px;
+  color: #949494; }
+  .small-dlg-title .lines-around:before, .small-dlg-title .lines-around:after {
+    width: 65px; }
+
+.device-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(215, 225, 234, 0.3);
+  padding: 30px 0;
+  margin-top: 25px;
+  margin-bottom: 34px; }
+  .device-info > button {
+    font-family: Raleway;
+    padding: 7px 44px;
+    border: solid 1px #7899fc;
+    background-color: rgba(215, 225, 234, 0.8);
+    color: #374049;
+    font-size: 12px;
+    margin-top: 40px;
+    font-weight: 600;
+    -ms-flex-item-align: center;
+        align-self: center; }
+    .device-info > button img {
+      margin-right: 10px; }
+  .device-info section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .device-info section > div {
+      padding: 0 14px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .device-info section > div div, .device-info section > div aside {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        font-size: 12px; }
+        .device-info section > div div p, .device-info section > div aside p {
+          white-space: nowrap;
+          margin-top: 15px;
+          margin-right: 35px;
+          letter-spacing: 1.35px;
+          color: #121212;
+          text-transform: uppercase;
+          opacity: 0.5;
+          font-weight: 400; }
+        .device-info section > div div p:first-child, .device-info section > div aside p:first-child {
+          margin-top: 0; }
+      .device-info section > div aside {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: start;
+                flex-direction: start; }
+        .device-info section > div aside span {
+          white-space: nowrap;
+          font-weight: 600; }
+      .device-info section > div:last-child {
+        border-left: solid 1px #d5e1eb; }
+    .device-info section > div:first-child {
+      padding: 0; }
+
+.help-modal .small-dlg-title {
+  margin: 25px 0; }
+.help-modal article p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.qr-code p {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  line-height: 2; }
+.qr-code img {
+  margin-left: 70px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.contact-phone p:last-child {
+  font-size: 22px; }
+
+.modal-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -169,7 +315,7 @@ p, body {
   padding: 0;
   margin: 0; }
 
-.log-in-page-container section:first-child, header section, .flow-item-content .darken-block, .live-preview-indicate, .flow-item-title, .flow-item-content .content-btn-collect, .confirming-panel {
+.log-in-page-container section:first-child, .qr-code, .contact-phone, header section, .flow-item-content .darken-block, .live-preview-indicate, .flow-item-title, .flow-item-content .content-btn-collect, .confirming-panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,7 +326,7 @@ p, body {
       -ms-flex-pack: center;
           justify-content: center; }
 
-header section, .flow-item-content .darken-block, .live-preview-indicate {
+.qr-code, .contact-phone, header section, .flow-item-content .darken-block, .live-preview-indicate {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -413,7 +559,7 @@ header {
     color: #7899fc;
     cursor: pointer; }
 
-.confirming-panel, button {
+.confirming-panel button {
   text-transform: uppercase;
   font-family: "Lato";
   line-height: 1.14;

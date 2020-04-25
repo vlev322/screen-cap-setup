@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="main-container">
+    <div id="main-container" class="main-container">
       <!-- Header block START-->
       <div class="header-wrapper">
         <header>
@@ -22,7 +22,7 @@
             <a href="#"><img src="./assets/img/icons/png/logo.png" alt="home page" /></a>
           </div>
           <section>
-            <label for="dialog_state">Help</label>
+            <label class="toggle-modal">Help</label>
             <div>
               <input type="checkbox" id="acc-settings" />
               <label for="acc-settings">My Account</label>
@@ -255,15 +255,15 @@
                   <p>FOV ( Field of View Parallel)</p>
                   <p>Spatial pixel</p>
                   <div class="tip">
-                      <p>Maximum Belt Speed</p>
-                      <img src="./assets/img/icons/vector/icon-info.svg" alt="info speed" />
-                      <section>
-                        <span>Belt speed assumes square pixels and may need to be adjusted based on the sample present.</span>
-                        <div class="cube-wrapper">
-                          <div class="cube"></div>
-                        </div>
-                      </section>
-                    </div>
+                    <p>Maximum Belt Speed</p>
+                    <img src="./assets/img/icons/vector/icon-info.svg" alt="info speed" />
+                    <section>
+                      <span>Belt speed assumes square pixels and may need to be adjusted based on the sample present.</span>
+                      <div class="cube-wrapper">
+                        <div class="cube"></div>
+                      </div>
+                    </section>
+                  </div>
                   <p>Integration Time/Exposure</p>
                   <p>Frame Rate</p>
                 </div>
@@ -299,6 +299,58 @@
           <span>skip wizard</span>
           <button id="btn-next">next</button>
         </div>
+      </div>
+    </div>
+    <div class="modal-wrapper help-modal" id="help-modal">
+      <div class="modal">
+        <button class="toggle-modal pointer"><img src="./assets/img/icons/vector/close.svg" alt="" /></button>
+        <div class="large-dlg-title"><p class="lines-around">Need Help?</p></div>
+        <div class="device-info">
+          <section>
+            <div>
+              <div>
+                <p>serial number</p>
+                <p>software version</p>
+                <p>camera model</p>
+              </div>
+              <aside>
+                <span>#18980548596</span>
+                <span>1.12.3.4.5</span>
+                <span>MV.X 1</span>
+              </aside>
+            </div>
+            <div>
+              <div>
+                <p>MAC address 1</p>
+                <p>MAC address 2</p>
+                <p>GENICAM</p>
+              </div>
+              <aside>
+                <span>9AC-56kg</span>
+                <span>9AC-56kg</span>
+                <span>9AC-56kg</span>
+              </aside>
+            </div>
+          </section>
+          <button><img src="./assets/img/icons/vector/download.svg" alt="" />Download Manual</button>
+        </div>
+        <section>
+          <article>
+            <p>Submit a request for support through our streamlined Support Ticket System at:</p>
+            <a href="http://www.headwallphotonics.com/support" class="accent-color">www.headwallphotonics.com/support</a>
+          </article>
+        </section>
+        <div class="small-dlg-title"><p class="lines-around">or</p></div>
+        <section class="qr-code">
+          <p>User your mobile device to scan the QR code located on the side of your instrument</p>
+          <img src="./assets/img/icons/vector/qr-code.svg" alt="" />
+        </section>
+        <div class="small-dlg-title"><p class="lines-around">or</p></div>
+        <section class="contact-phone">
+          <p>Call our support line at:</p>
+          <img src="./assets/img/icons/vector/phone-call.svg" alt="" />
+          <p class="accent-color">+1 978-353-4100</p>
+        </section>
       </div>
     </div>
     <script src="./js/main.js"></script>
