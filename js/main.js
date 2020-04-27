@@ -42,3 +42,24 @@ for (const closeBtn of document.getElementsByClassName("toggle-modal")) {
     modalHelp.classList.toggle("modal-open");
   });
 }
+
+//Toggle password view
+
+const getSiblings = (passControl) =>
+  Array.prototype.filter.call(passControl.parentNode.children, function (child) {
+    return child !== passControl;
+  });
+
+for (const passControl of document.getElementsByClassName("pass-control")) {
+  passControl.addEventListener("click", function () {
+    const input = getSiblings(passControl)[0];
+    const getAttr = input.getAttribute("type");
+    if (getAttr === "password") {
+      input.setAttribute("type", "text");
+      passControl.classList.toggle("view")
+    } else {
+      input.setAttribute("type", "password");
+      passControl.classList.toggle("view")
+    }
+  });
+}

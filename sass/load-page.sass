@@ -1,0 +1,59 @@
+.load-page
+  background-image: url('../assets/img/backgrounds/bg-log_in.png')
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100vh
+  color: #ffffff
+  text-align: center
+  font-family: Lato
+  header
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding-right: 100px
+    padding-top: 30px
+  >section
+    display: flex
+    height: 80%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h1
+      font-size: 34px
+      letter-spacing: -0.12px
+      margin: 0
+      font-weight: 400
+    h2,p
+      font-weight: 300
+      letter-spacing: -0.07px
+      margin: 0
+    p
+      font-size: 20px
+
+  .progress
+    margin-top: 55px
+    margin-bottom: 19px
+// Loader
+.progress
+  background: rgba(255, 255, 255, 0.6)
+  justify-content: flex-start
+  border-radius: 100px
+  align-items: center
+  position: relative
+  display: flex
+  height: 7px
+  width: 406px
+
+  &-value
+    animation: load 3s normal forwards
+    box-shadow: 0 10px 40px -10px #fff
+    border-radius: 100px
+    background: #fff
+    height: 7px
+    width: 0
+
+@keyframes load
+  0%
+    width: 0
+  100%
+    width: 68%
