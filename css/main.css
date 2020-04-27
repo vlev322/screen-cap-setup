@@ -330,7 +330,9 @@
         -ms-flex-align: center;
             align-items: center;
     padding-right: 100px;
-    padding-top: 30px; }
+    padding-top: 30px;
+    font-size: 18px;
+    color: #fff; }
   .load-page > section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -789,6 +791,7 @@ header {
     position: relative;
     text-align: right; }
     .flow-item-content .content-inputs section div input {
+      background: transparent;
       padding: 6px 18px;
       border: 1px solid #d5e1eb;
       border-radius: 3px;
