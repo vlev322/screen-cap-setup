@@ -45,6 +45,9 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring
   outline: none
+input:focus::-webkit-textfield-decoration-container
+  visibility: hidden
+  pointer-events: none
 
 p, body
   padding: 0
@@ -264,23 +267,32 @@ header
   background-color: #fff
   padding: 29px 135px
   padding-bottom: 36px
+  text-transform: uppercase
+  display: none
   button
     padding: 12px 103px
     background-color: $accent
     color: #ffffff
     border-radius: 3px
+    text-transform: uppercase
+    font-family: 'Lato'
+    line-height: 1.14
+    letter-spacing: 1.25px
+    font-size: 14px
+    font-weight: 300
+    &:disabled
+      background-color: $bdr-c
+      color: $text-c
   span
     margin-right: 150px
     color: $accent
     cursor: pointer
+    font-size: 14px
 
-.confirming-panel button
-  text-transform: uppercase
-  font-family: 'Lato'
-  line-height: 1.14
-  letter-spacing: 1.25px
-  font-size: 14px
-  font-weight: 300
+
+
+.confirming-panel.open
+  display: flex
 
 //Content for setup flow
 .arrow
@@ -383,7 +395,7 @@ header
         color: $text-c-sec
         position: absolute
         right: 10px
-        top: 5px
+        top: 7px
 
 .content-inputs ~ .content-text
   margin-bottom: 80px

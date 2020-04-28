@@ -98,7 +98,6 @@
       left: 7px
       padding: 1px 4px
       display: none
-
     input
       border: 1px solid #949494
       border-radius: 3px
@@ -128,6 +127,13 @@
     line-height: 1.14
     letter-spacing: 1.25px
     margin-top: 44px
+.auth-form
+  .input-composition
+    span.visible-plhdr
+      display: block
+      color: #b6b6b6
+    input:focus ~ span
+      color: $accent
 
 // modal
 .modal-wrapper

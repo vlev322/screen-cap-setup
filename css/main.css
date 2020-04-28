@@ -135,6 +135,12 @@
     letter-spacing: 1.25px;
     margin-top: 44px; }
 
+.auth-form .input-composition span.visible-plhdr {
+  display: block;
+  color: #b6b6b6; }
+.auth-form .input-composition input:focus ~ span {
+  color: #7899fc; }
+
 .modal-wrapper {
   position: absolute;
   width: 100%;
@@ -445,6 +451,10 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: none; }
 
+input:focus::-webkit-textfield-decoration-container {
+  visibility: hidden;
+  pointer-events: none; }
+
 p, body {
   padding: 0;
   margin: 0; }
@@ -683,24 +693,33 @@ header {
           box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
   padding: 29px 135px;
-  padding-bottom: 36px; }
+  padding-bottom: 36px;
+  text-transform: uppercase;
+  display: none; }
   .confirming-panel button {
     padding: 12px 103px;
     background-color: #7899fc;
     color: #ffffff;
-    border-radius: 3px; }
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: "Lato";
+    line-height: 1.14;
+    letter-spacing: 1.25px;
+    font-size: 14px;
+    font-weight: 300; }
+    .confirming-panel button:disabled {
+      background-color: #d5e1eb;
+      color: #374049; }
   .confirming-panel span {
     margin-right: 150px;
     color: #7899fc;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 14px; }
 
-.confirming-panel button {
-  text-transform: uppercase;
-  font-family: "Lato";
-  line-height: 1.14;
-  letter-spacing: 1.25px;
-  font-size: 14px;
-  font-weight: 300; }
+.confirming-panel.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .arrow {
   position: relative;
@@ -802,7 +821,7 @@ header {
       color: #949494;
       position: absolute;
       right: 10px;
-      top: 5px; }
+      top: 7px; }
 
 .content-inputs ~ .content-text {
   margin-bottom: 80px; }
