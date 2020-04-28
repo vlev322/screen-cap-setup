@@ -20,11 +20,12 @@ function* menuItemsGenerator(items) {
 }
 
 const scrollController = (elem, toggleHide) => {
+  if (!elem) {
+    return;
+  }
   elem.addEventListener("scroll", function () {
     if (elem.scrollHeight - elem.clientHeight === elem.scrollTop) {
       toggleHide.classList.add("open");
-    } else {
-      toggleHide.classList.remove("open");
     }
   });
 };
@@ -36,9 +37,11 @@ const btnNext = document.getElementById("btn-next");
 let flowContent = document.getElementsByClassName("flow-item-content")[0];
 let collectBtn = document.getElementsByClassName("content-btn-collect")[0];
 
-collectBtn.addEventListener("click", () => {
-  btnNext.disabled = false;
-});
+if (collectBtn) {
+  collectBtn.addEventListener("click", () => {
+    btnNext.disabled = false;
+  });
+}
 
 scrollController(flowContent, confPanel);
 if (btnNext) {

@@ -638,8 +638,9 @@ header {
   top: 0;
   font-family: "Raleway";
   padding: 50px 67px;
+  padding-bottom: 110px;
   width: 80%;
-  height: 85%;
+  height: 100%;
   overflow: scroll; }
   .flow-item-content .content-text {
     font-size: 14px;
@@ -681,11 +682,13 @@ header {
       margin-bottom: 15px; }
 
 .confirming-panel {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   position: absolute;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  bottom: 0;
+  bottom: -100px;
   width: 100%;
   height: 110px;
   height: 105px;
@@ -694,8 +697,7 @@ header {
   background-color: #fff;
   padding: 29px 135px;
   padding-bottom: 36px;
-  text-transform: uppercase;
-  display: none; }
+  text-transform: uppercase; }
   .confirming-panel button {
     padding: 12px 103px;
     background-color: #7899fc;
@@ -717,9 +719,7 @@ header {
     font-size: 14px; }
 
 .confirming-panel.open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  bottom: 0; }
 
 .arrow {
   position: relative;
